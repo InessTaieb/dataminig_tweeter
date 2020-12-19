@@ -12,14 +12,13 @@ It is a good ressource to collect data. We can find a few libraries (Python) whi
 # Steps :
 ## Creating a developper account
 ## Importing twipy and getting authentification keys:
-from tweepy import OAuthHandler
-from tweepy import API
 
-# Consumer key authentication
-auth = OAuthHandler("qIwnNNJMkjBzFGXbvIfDCx5L1", "qBDTDdhi0PtgPg2SBIdZGOE5KpXqcjjQHdMXIXazbfa6wkxpb2")
 
-# Access key authentication
-auth.set_access_token("1338511495739674629-uCRKkRhkSBdUJO45rzkn4am36WEM4w", "889fsak4U775JstxLLgfaUcrEVYoJJS7ikBUUQNaMl5m4")
+  # GIf1: Réalisation du NLTK :
+  ![Sreenshot](keys.png)
+  
+   # GIf1: Classification Kmeans :
+  ![Sreenshot](gif6.gif)
 
-# Set up the API with the authentication handler
-api = API(auth)
+
+
