@@ -1,9 +1,5 @@
 # dataminig_tweeter
-# Objectifs: 
-•Maitriser l’API de twitter pour l’extraction des tweets
-•Maitriser la partie NLP (naturallanguageprocessing) avec NLTK en Python
-•Appliquer les principes de nettoyage des données
-•Classer les tweets
+
 
 # Introduction :
 Twitter is an American microblogging and social networking service on which users post and interact with messages known as "tweets".
@@ -43,7 +39,10 @@ stream = Stream(auth, listen)
 stream.filter(track = keywords_to_track)
 ```
 
+In this section we are going to focus on the most important part of the analysis. In general rule the tweet are composed by several strings that we have to clean before working correctly with the data.
 # Deleting empty columns:
+
+
 ``` to_drop = ['in_reply_to_status_id','contributors','geo', 'withheld_in_countries', 'place', 'in_reply_to_status_id_str',
            'in_reply_to_user_id', 'in_reply_to_user_id_str', 'in_reply_to_screen_name', 'coordinates','retweeted_status-user-screen_name',
            'retweeted_status-text','display_text_range', 'quoted_status_id','quoted_status_id_str','quoted_status','quoted_status_permalink',
@@ -53,6 +52,7 @@ df_tweet = df_tweet.drop(to_drop, axis=1)
 ```
 
 # Deleting pontuations, emojis and URLs
+We can find an URL, punctuations and a username of one tweetos (preceded by @). Before the data visualisation or the sentiment analysis it is necessary to clean the data. Delete the punctuations, the URLs
 
 ``` import re
 import emoji
