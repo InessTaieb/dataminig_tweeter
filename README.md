@@ -71,11 +71,11 @@ def cleaner(tweet):
 df_tweet['text_clean'] = df_tweet['text'].map(lambda x: cleaner(x))
 ```
 # Showing tweets before cleaning
-``` print(df_tweet['text'])
+```print(df_tweet['text'])
 ```
 # Showing tweets after cleaning
 
-``` print(df_tweet['text_clean'])
+```print(df_tweet['text_clean'])
 ```
 # Finding the optimal cluster :
 ```
