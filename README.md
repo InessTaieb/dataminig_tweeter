@@ -11,7 +11,7 @@ It is a good ressource to collect data. We can find a few libraries (Python) whi
 
 # Steps :
 ## Creating a developper account
-## Importing twipy and getting authentification keys:
+## Importing tweepy and getting authentification keys:
 
 ```from tweepy import OAuthHandler
 from tweepy import API
@@ -25,5 +25,17 @@ auth.set_access_token("1338511495739674629-uCRKkRhkSBdUJO45rzkn4am36WEM4w", "889
 # Set up the API with the authentication handler
 api = API(auth)```
 
+# Collecting tweets:
+```from tweepy import Stream
 
+# Set up words to track
+keywords_to_track = ["welcome","today"]
 
+# Instantiate the SListener object 
+listen = SListener(api)
+
+# Instantiate the Stream object
+stream = Stream(auth, listen)
+
+# Begin collecting data
+stream.filter(track = keywords_to_track)```
